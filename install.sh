@@ -1,12 +1,12 @@
 #! /bin/bash
 # Por Jorge Dueñas Lerín
 
-# Verifica que el fichero id.txt tiene un contienido
-if grep -q "Modifícame" id.txt; then
-    echo "El fichero id.txt no ha sido modificado. Por favor, modifícalo antes de continuar."
+# Verifica que el fichero id.txt existe
+if [ ! -f id.txt ]; then
+    echo "El fichero id.txt no existe. Por favor, créalo antes de continuar."
     exit 1
 else
-    echo "El fichero id.txt ha sido modificado correctamente."
+    echo "El fichero id.txt ha sido encontrado."
 fi
 
 mkdir -p ~/Disco/Imagen/
