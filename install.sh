@@ -34,4 +34,13 @@ cp start_minix ${WK_PATH}/Utilidades/
 sed -i "s/##id##/$ID_ALUMNO/g" ${WK_PATH}/Utilidades/start_minix
 chmod +x ${WK_PATH}/Utilidades/start_minix
 
+
+if [ -f /home/alumno/.ssh/id_rsa ]; then
+    cp /home/alumno/.ssh/id_rsa /home/alumno/Disco/Claves/id_rsa
+    cp /home/alumno/.ssh/id_rsa.pub /home/alumno/Disco/Claves/id_rsa.pub
+    echo "Clave SSH copiada."
+else
+    echo "Error no hay clave SSH"
+fi
+
 echo "Instalación completada. Puedes iniciar Minix ejecutando la orden: start_minix"
