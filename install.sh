@@ -43,4 +43,18 @@ else
     echo "Error no hay clave SSH"
 fi
 
+if [ -f /home/alumno/.gitconfig ]; then
+    cp /home/alumno/.gitconfig /home/alumno/Disco/Claves/gitconfig
+    echo "Archivo .gitconfig copiado."
+else
+    echo "Error no hay archivo .gitconfig"
+fi
+
+if [ -f ~/.ssh/known_hosts ]; then
+    cp ~/.ssh/known_hosts ~/Disco/Claves/known_hosts
+    echo "Archivo known_hosts copiado."
+else
+    echo "Error no hay archivo known_hosts"
+fi
+
 echo "Instalación completada. Puedes iniciar Minix ejecutando la orden: start_minix"

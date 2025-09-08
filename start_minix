@@ -21,5 +21,5 @@ qemu-system-x86_64 \
     -drive file=fat:rw:"${MINIXOUT}",format=raw,media=disk,cache=none \
     -netdev tap,id=n1,ifname=tap0,script=no,downscript=no \
     -device ne2k_pci,netdev=n1,mac=52:54:98:76:54:32 \
-    -debugcon file:${MINIXLOG}
-    -display sdl,grab=off
+    -debugcon file:${MINIXLOG} \
+    -display gtk,grab-on-hover=off
