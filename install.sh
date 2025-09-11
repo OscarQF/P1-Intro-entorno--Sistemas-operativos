@@ -25,7 +25,8 @@ mkdir -p ${WK_PATH}
 
 cp minix3hd.plot.7z ${WK_PATH}/Imagen/
 7z x ${WK_PATH}/Imagen/minix3hd.plot.7z -o${WK_PATH}/Imagen/
-cp ${WK_PATH}/Imagen/minix3hd.plot.qcow2 ${WK_PATH}/Imagen/minix3hd.plot.$ID_ALUMNO.qcow2
+mv ${WK_PATH}/Imagen/minix3hd.plot.qcow2 ${WK_PATH}/Imagen/minix3hd.plot.$ID_ALUMNO.qcow2
+rm ${WK_PATH}/Imagen/minix3hd.plot.7z
 
 cp minix312ahack.7z ${WK_PATH}/Minix/
 7z x ${WK_PATH}/Minix/minix312ahack.7z -o${WK_PATH}/Minix/
