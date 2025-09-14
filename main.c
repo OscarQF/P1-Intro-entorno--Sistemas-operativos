@@ -173,7 +173,7 @@ PRIVATE void announce(void)
 {
   /* Display the MINIX startup banner. */
   kprintf("\nMINIX %s.%s. "
-      "Copyright 2006, Vrije Universiteit, Amsterdam, The Netherlands\n",
+      "kernel compilado por Oscar Quero Fernandez 2025\n",
       OS_RELEASE, OS_VERSION);
 #if (CHIP == INTEL)
   /* Real mode, or 16/32-bit protected mode? */
