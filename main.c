@@ -21,6 +21,8 @@
 #include <minix/com.h>
 #include <minix/endpoint.h>
 #include "proc.h"
+#include "e9_system.h"
+
 
 /* Prototype declarations for PRIVATE functions. */
 FORWARD _PROTOTYPE( void announce, (void));	
@@ -175,6 +177,8 @@ PRIVATE void announce(void)
   kprintf("\nMINIX %s.%s. "
       "kernel compilado por Oscar Quero Fernandez 2025\n",
       OS_RELEASE, OS_VERSION);
+      e9_printf("kernel compilado por Oscar Quero Fernandez 2025");
+
 #if (CHIP == INTEL)
   /* Real mode, or 16/32-bit protected mode? */
   kprintf("Executing in %s mode.\n\n",
